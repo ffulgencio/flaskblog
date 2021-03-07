@@ -1,10 +1,25 @@
 {% extends 'index.html'%}
 {% block container%}
+    <a href="{{ url_for('create_post')}}" class="btn btn-success btn-block">Crear nuevo post </a>
     {% for post in posts %}
-    <div class="row">
+    <!-- <div>
         <h2>{{ post[1] }}</h2>
         <p>{{ post[2] }}</p>
         <p>{{ post[3] }}</p>
-    </div>
+    </div> -->
+
+    <div class="post-preview">
+        <a href="post.html">
+          <h2 class="post-title">
+           {{ post[1] }}
+          </h2>
+          <h3 class="post-subtitle">
+            Problems look mighty small from 150 miles up
+          </h3>
+        </a>
+        <p class="post-meta">Posted by
+          <a href="#">{{ post[2]}}</a>
+          on September 24, 2019</p>
+      </div>
     {% endfor %}
 {% endblock %}
