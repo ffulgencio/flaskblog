@@ -1,0 +1,13 @@
+{% extends 'index.html'%}
+{% block container%}
+    <form method="POST">
+        <label for="title">Titulo</label>
+        <input class="form-control" type="text" name="title">
+        <label for="autor">Autor</label>
+        <input class="form-control" type="text" name = "autor">
+        <label for="contenido">Contenido</label>
+        <textarea name="contenido" id="" cols="100" rows="10" class="form-control"></textarea>
+        <br>
+        <input type="submit" value="Guardar" class="btn btn-success">
+    </form>
+{% endblock %}
